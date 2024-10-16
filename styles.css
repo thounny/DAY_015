@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./helveticaneue.woff2");
+}
+
+html,
+body {
+  width: 100vw;
+  height: 1000vh;
+  font-family: "Helvetica Neue", Helvetica;
+  color: #fff;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+h1 span {
+  color: #6e6e6e;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555555;
+  text-align: justify;
+  line-height: 130%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.about p {
+  color: #000;
+}
+
+.sticky {
+  background-color: #000;
+}
+
+.hand-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  will-change: transform;
+  z-index: 2;
+}
+
+.hand {
+  position: absolute;
+  width: 5.5%;
+  height: 52.75%;
+  background-color: rgb(238, 238, 238);
+  border-radius: 1000px;
+  will-change: transform;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.intro {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 25%;
+  width: 22.5%;
+}
+
+.intro p {
+  position: relative;
+  margin-top: 0.75em;
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.website-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+}
+
+.website-content h1 {
+  font-size: 10vw;
+  letter-spacing: -0.03em;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .intro {
+    width: 35%;
+    left: 2em;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
